@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>EcoSense</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="loginPage">
+  <div class="login-box">
+    <h2>🌍 EcoSense</h2>
+    <input type="text" id="user" placeholder="Username">
+    <input type="password" id="pass" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="error" style="color:red;"></p>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div id="mainPage">
+
+<header>
+  <h1>🌍 EcoSense</h1>
+  <p>Solusi Cerdas Lingkungan Bersih & Edukasi Sosial</p>
+  <button class="logout" onclick="logout()">Logout</button>
+</header>
+
+<section>
+<h2>🌱 Kondisi Lingkungan</h2>
+<div class="cards">
+
+<div class="card" onclick="popupInfo('bersih')">
+  <img src="https://dlh.bulelengkab.go.id/uploads/konten/lingkungan-bersih-ciptakan-hidup-sehat-30.jpg">
+  <div class="card-content">
+    <h3>Bersih & Terawat</h3>
+    <p>Lingkungan sehat yang mendukung kehidupan sosial.</p>
+  </div>
+</div>
+
+<div class="card" onclick="popupInfo('sampah')">
+  <img src="https://minangsatu.com/upload/IMG_20210524_142122.jpg">
+  <div class="card-content">
+    <h3>Banyak Sampah</h3>
+    <p>Sampah menumpuk akibat kurangnya kesadaran.</p>
+  </div>
+</div>
+
+<div class="card" onclick="popupInfo('rusak')">
+  <img src="https://alamendah.org/wp-content/uploads/2014/08/kerusakan-lingkungan-1.jpg">
+  <div class="card-content">
+    <h3>Lingkungan Rusak</h3>
+    <p>Kerusakan akibat aktivitas manusia.</p>
+  </div>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>🤖 Solusi AI: Cara Menanggulangi</h2>
+<div class="ai-box">
+<select id="kondisi">
+<option value="">-- Pilih Kondisi --</option>
+<option value="bersih">Sudah Bersih</option>
+<option value="sampah">Banyak Sampah</option>
+<option value="rusak">Rusak Parah</option>
+</select>
+<button onclick="tampilkanSolusi()">Lihat Cara Menanggulangi</button>
+</div>
+</section>
+
+<footer>
+<p>© 2025 EcoSense</p>
+</footer>
+
+</div>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+  <div class="popup-content" id="popupText"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
